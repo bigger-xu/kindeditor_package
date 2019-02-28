@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="kindeditor/map.js"></script>
+	<script type="text/javascript" src="kindeditor/kindeditor-all.js"></script>
+	<script type="text/javascript" src="kindeditor/lang/zh_CN.js"></script>
+	<script type="text/javascript" src="kindeditor/ywKindEditor.js"></script>
+	<script type="text/javascript">
+		$.initKindEditor('#editer',{width:800,height:200,minHeight:200});   //初始化编辑器  设置大小
+		function add(){
+			alert($.kindEditorGetData("#editer"));
+		};
+		function edit(){
+			$.kindEditorSetData("#editer","给编辑器赋值,我是默认赋值");
+		};
+	</script>
+</head>
+<body>
+	<input type="text" id="editer">
+
+	<div>
+		<button onclick="add()">获取编辑器的值</button>
+		<button onclick="edit()">给编辑器赋值</button>
+	</div>
+</body>
+</html>
